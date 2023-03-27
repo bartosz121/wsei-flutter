@@ -1,16 +1,11 @@
-# wsei_flutter
+Flutter aplikacja - wymagania:
 
-A new Flutter project.
+Ocena 3:
+- Minimalna ilość widoków 3 (widok ogólny, detale, i inny)
+- Dane musza być pobierane z internetu i wyświetlane w aplikacji (konieczność użycia REST API + Future)
 
-## Getting Started
+Ocena 4:
+- Dowolna animacja
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Ocena 5:
+- Możliwość przełączania sposobu wyświetlania danych na widoku: np mapa - > lista, lista -> grid itp.
