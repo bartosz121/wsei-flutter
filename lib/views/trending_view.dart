@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:wsei_flutter/models/trending_movie.dart';
 import 'package:wsei_flutter/views/movie_details.dart';
 import 'package:wsei_flutter/services/api_service.dart';
@@ -50,13 +51,9 @@ class _MoviesViewState extends State<MoviesView> {
                             padding: const EdgeInsets.all(8.0),
                             child: InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          MovieDetails(movieId: movie.id),
-                                    ),
-                                  );
+                                  Get.to(() => MovieDetails(movieId: movie.id),
+                                      transition: Transition.fade,
+                                      duration: const Duration(seconds: 1));
                                 },
                                 child: Image.network(
                                   'https://image.tmdb.org/t/p/w500${movie.posterPath}',

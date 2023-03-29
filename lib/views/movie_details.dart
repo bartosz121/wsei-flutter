@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:wsei_flutter/models/movie_credits.dart';
 import 'package:wsei_flutter/models/movie_detail.dart';
 import 'package:wsei_flutter/views/person_details.dart';
@@ -120,14 +121,11 @@ class _MovieDetailsState extends State<MovieDetails> {
                               padding: const EdgeInsets.only(right: 16.0),
                               child: GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => PersonDetailsView(
-                                        personId: castMember.id,
-                                      ),
-                                    ),
-                                  );
+                                  Get.to(
+                                      () => PersonDetailsView(
+                                          personId: castMember.id),
+                                      transition: Transition.zoom,
+                                      duration: const Duration(seconds: 1));
                                 },
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
